@@ -19,5 +19,15 @@ namespace Dal
 
             base.OnConfiguring(optionsBuilder);
         }
+
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Classroom>().ToTable("Classrooms");
+        //    modelBuilder.Entity<Person>().ToTable("People");
+        //    modelBuilder.Entity<Student>().ToTable("Students");
+        //    modelBuilder.Entity<Teacher>().ToTable("Teachers");
+
+        //    base.OnModelCreating(modelBuilder);
+        //}
     }
 }

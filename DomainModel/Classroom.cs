@@ -1,5 +1,8 @@
-﻿namespace DomainModel
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace DomainModel
 {
+    [Table("Classroom")]
     public class Classroom
     {
         public int ClassroomID { get; set; }
