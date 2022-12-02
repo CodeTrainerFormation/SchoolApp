@@ -11,6 +11,7 @@ namespace ConsoleApp
             Console.WriteLine("OK");
         }
 
+        // création de la base
         private static void TestDb()
         {
             using (SchoolContext context = new SchoolContext())
