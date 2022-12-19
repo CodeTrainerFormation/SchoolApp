@@ -18,6 +18,8 @@ namespace DomainModel
 
         public int Salary { get; set; }
 
+        public DateTime? HiringDate { get; set; }
+
         public int? ClassroomID { get; set; }
         public Classroom Classroom { get; set; }
     }

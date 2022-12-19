@@ -206,7 +206,7 @@ namespace ConsoleApp
         {
             using (SchoolContext context = new SchoolContext())
             {
-                context.Database.EnsureDeleted();
+                
                 context.Database.EnsureCreated();
 
 

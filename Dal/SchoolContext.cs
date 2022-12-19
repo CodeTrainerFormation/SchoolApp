@@ -9,6 +9,7 @@ namespace Dal
         public DbSet<Student> Students { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
         public DbSet<Classroom> Classrooms { get; set; }
+        public DbSet<Administrative> Administratives { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
