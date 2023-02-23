@@ -13,11 +13,11 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            //TestDb();
+            TestDb();
 
-            //InitDb();
+            InitDb();
 
-            Queries();
+            //Queries();
 
             Console.WriteLine("OK");
         }
@@ -281,7 +281,7 @@ namespace ConsoleApp
         {
             using (SchoolContext context = new SchoolContext())
             {
-                //context.Database.EnsureDeleted();
+                context.Database.EnsureDeleted();
                 context.Database.EnsureCreated();
 
 

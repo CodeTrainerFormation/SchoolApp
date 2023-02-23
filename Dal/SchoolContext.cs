@@ -1,5 +1,6 @@
 ﻿using DomainModel;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace Dal
 {
@@ -11,11 +12,22 @@ namespace Dal
         public DbSet<Classroom> Classrooms { get; set; }
         public DbSet<Administrative> Administratives { get; set; }
 
+        public SchoolContext()
+            : base()
+        {
+        }
+
+        public SchoolContext(DbContextOptions options)
+            : base(options)
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if(!optionsBuilder.IsConfigured)
+            if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=MySchoolDatabase;Integrated Security=true");
+                //optionsBuilder.UseInMemory();
+                //optionsBuilder.UseSqlServer(@"Data Source=(localdb)\mssqllocaldb;Initial Catalog=MySchoolDatabase;Integrated Security=true");
             }
 
             base.OnConfiguring(optionsBuilder);

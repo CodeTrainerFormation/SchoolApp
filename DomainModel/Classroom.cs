@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace DomainModel
 {
@@ -15,7 +16,10 @@ namespace DomainModel
         public int Floor { get; set; }
         public string? Corridor { get; set; }
 
-        public Teacher Teacher { get; set; }
-        public ICollection<Student> Students { get; set; }
+        [JsonIgnore]
+        public Teacher? Teacher { get; set; }
+
+        [JsonIgnore]
+        public ICollection<Student>? Students { get; set; }
     }
 }

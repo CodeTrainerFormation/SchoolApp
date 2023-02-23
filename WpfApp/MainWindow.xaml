@@ -1,0 +1,18 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="AppSchool" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="dgStudents" IsReadOnly="True" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="40,182,60,46"/>
+        <ComboBox x:Name="cbClassrooms" HorizontalAlignment="Left" Margin="40,50,0,0" VerticalAlignment="Top" Width="202" SelectionChanged="comboBox_SelectionChanged"/>
+        <TextBox x:Name="tbTeacherFirstName" HorizontalAlignment="Left" Margin="437,118,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblClassroomName" Content="Salle Satya Nadella" HorizontalAlignment="Left" Margin="530,40,0,0" VerticalAlignment="Top" FontSize="24"/>
+        <TextBox x:Name="tbTeacherLastName" HorizontalAlignment="Left" Margin="608,118,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lblTeacher" Content="Professeur" HorizontalAlignment="Left" Margin="335,114,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>
