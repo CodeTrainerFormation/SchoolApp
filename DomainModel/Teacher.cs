@@ -25,6 +25,6 @@ namespace DomainModel
         public int? ClassroomID { get; set; }
 
         [JsonIgnore]
-        public Classroom Classroom { get; set; }
+        public Classroom? Classroom { get; set; }
     }
 }

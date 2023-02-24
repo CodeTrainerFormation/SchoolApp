@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  schoolapi:
+    image: ${DOCKER_REGISTRY-}schoolapi
+    build:
+      context: .
+      dockerfile: SchoolApi/Dockerfile

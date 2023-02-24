@@ -85,6 +85,12 @@ namespace ConsoleAppClient
                 if (message.IsSuccessStatusCode)
                 {
                     Console.WriteLine("Classroom ajouté");
+
+                    string messageContent = await message.Content.ReadAsStringAsync();
+
+                    Console.WriteLine(content);
+
+                    var classroomResponse = JsonConvert.DeserializeObject<Classroom>(messageContent);
                 }
             }
         }
